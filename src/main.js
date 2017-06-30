@@ -12,7 +12,17 @@ Vue.use(VueResource);
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 
+//图片懒加载
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
 
+Vue.use(VueLazyload, {
+    preLoad: 5,
+    error: './assets/image/error.jpg',
+    loading: 'http://cdn.uehtml.com/201402/1392662591495_1140x0.gif',
+    attempt: 1,
+    listenEvents: ['scroll', 'mousewheel']
+});
 
 // UI组件
 import Element from 'element-ui'

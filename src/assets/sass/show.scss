@@ -82,3 +82,28 @@ $netpink: #FA7198;
         }
     }
 }
+
+.showItem {
+    img {
+        transition: all 0.5s;
+    }
+    img[lazy=loading] {
+        background: url(../assets/image/loading.gif) no-repeat;
+        background-size: 100% 100%;
+    }
+    img[lazy=error] {
+        background: url(../assets/image/error.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    img[lazy=loaded] {
+        animation: fade 0.5s;
+    }
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}

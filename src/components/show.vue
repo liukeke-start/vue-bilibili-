@@ -25,10 +25,8 @@
       <span class="right">当前<span class="totalNum">5849</span>个主播  ></span>
     </div>
     <div class="show-content">
-      <div class="showItem col-xs-6" v-for="n in 13">
-        <img src="../assets/image/a.jpg">
-        <!--<img :src="item.pic" alt="" class="showImg">-->
-         <!--<span>{{ n }}</span>-->
+      <div class="showItem col-xs-6" v-for="item in imgUrl">
+        <img v-lazy="item.src">
         <div class="showInfo">
           <span class="showTag">#美妆#</span>
           <span class="showTitle">怎么学会化妆</span>
@@ -50,8 +48,19 @@
 <script>
 import vSwiper from '@/components/swiper'
 export default {
-  data () {
-    return { }
+  name: 'showItem',
+  data() {
+    return {
+      imgUrl: [
+        {src: '../assets/image/a.jpg'},
+        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: ''}
+      ]
+    };
   },
   components: {
     vSwiper
