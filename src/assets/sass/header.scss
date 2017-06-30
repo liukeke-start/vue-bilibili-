@@ -1,0 +1,55 @@
+.headpage {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .b-header {
+        padding-top: 1rem;
+        background-color: rgb(250, 113, 152);
+        >img {
+            height: 3rem;
+            width: 3rem;
+            line-height: 3rem;
+            margin-left: 1.5rem;
+            border-radius: 50%;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    .b-navbar {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(250, 113, 152);
+        }
+        li {
+            flex: 1;
+            text-align: center;
+            color: rgba(225, 225, 225, .95);
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+        a {
+            position: relative;
+        }
+        a.router-link-active {
+            color: #fff;
+            font-weight: 550;
+            position: relative;
+        }
+        a.router-link-active:after {
+            content: ' ';
+            position: absolute;
+            bottom: 0;
+            left: 22%;
+            right: 22%;
+            width: 60%;
+            border-bottom: .27rem solid #fff;
+        }
+    }
+}
