@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 // 引入组件
 import show from "@/components/show.vue";
+import showPlay from '@/components/showPlay.vue'
 import recommond from "@/components/recommond.vue";
 import drama from "@/components/drama.vue";
 import partition from "@/components/partition.vue";
@@ -18,6 +19,10 @@ Vue.use(VueRouter);
 const routes = [{
             path: "/show",
             component: show
+        },
+        {
+            path: 'showPlay',
+            component: showPlay
         },
         {
             path: "/recommond",

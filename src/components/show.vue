@@ -25,7 +25,8 @@
       <span class="right">当前<span class="totalNum">5849</span>个主播  ></span>
     </div>
     <div class="show-content">
-      <div class="showItem col-xs-6" v-for="item in imgUrl">
+      <div class="showItem col-xs-6" @click="showDetail" v-for="item in imgUrl">
+        <!--<router-link to="/showPlay">-->
         <img v-lazy="item.src">
         <div class="showInfo">
           <span class="showTag">#美妆#</span>
@@ -36,6 +37,7 @@
             <span class="showNum">200</span>
           </div>
         </div>
+        <!--</router-link>-->
       </div>
     </div>
   </div>
@@ -64,6 +66,14 @@ export default {
   },
   components: {
     vSwiper
+  },
+  methods: {
+    showDetail() {
+      // this.$store.state.displayHeader = false;
+      console.log(123);
+      this.$router.push({path:'/showPlay'});
+      //  this.$router.go('/showPlay');
+    },
   }
 }
 </script>
