@@ -13,3 +13,7 @@
         }
     }
 </script>
+<style lang="scss">
+@import '../assets/sass/show.scss'
+</style>
+

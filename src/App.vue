@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <v-header></v-header>
+    <v-header v-show="this.$route.name != 'showplay'"></v-header>
+    <div class="b-content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -8,6 +11,11 @@
 import vHeader from '@/components/header'
 export default {
   name: 'app',
+  data(){
+    return {
+      isShow: this.$route.name == 'showplay'
+    }
+  },
   components: {
     vHeader
   }

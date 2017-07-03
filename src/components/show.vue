@@ -71,7 +71,7 @@ export default {
     showDetail() {
       // this.$store.state.displayHeader = false;
       console.log(123);
-      this.$router.push({path:'/showPlay'});
+      this.$router.push({name:'showplay'});
       //  this.$router.go('/showPlay');
     },
   }

@@ -19,9 +19,7 @@
         </ul>
       </div>
     </div>
-    <div class="b-content">
-      <router-view></router-view>
-   </div>
+
   </div>
 </template>
 <script>

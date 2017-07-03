@@ -21,7 +21,8 @@ const routes = [{
             component: show
         },
         {
-            path: 'showPlay',
+            name: 'showplay',
+            path: '/showPlay',
             component: showPlay
         },
         {
