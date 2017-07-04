@@ -40,6 +40,23 @@
         <!--</router-link>-->
       </div>
     </div>
+    <div class="aboutMe" @click="showMe">
+      <img src="../assets/image/me.png" alt="" class="me">
+      <img src="../assets/image/next.png" alt="" class="next">
+    </div>
+    <transition name="fade">
+      <div class="mask" v-show="isAbout"></div>
+    </transition>
+    <transition name="slide">
+        <div class="about" v-if="isAbout" >
+          <span class="close" @click="back">X</span>
+          <div class="title">标题</div>
+          <div class="content">内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区
+            内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内容区内
+            容区内容区内容区内容区内容区内容
+          </div>
+        </div>
+    </transition>
   </div>
   <!-- vue模板只能有一个根对象后面不能再有div -->
     <!--<div>
@@ -53,15 +70,16 @@ export default {
   name: 'showItem',
   data() {
     return {
+      isAbout:'',
       imgUrl: [
-        {src: '../assets/image/a.jpg'},
-        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
-        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
-        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
-        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
-        {src: '//i0.hdslb.com/bfs/archive/22528e30aca296787be1998a9231909d5ff50ef8.jpg@339w_212h.webp'},
+        {src: '//ooo.0o0.ooo/2017/07/03/5959bf6468a00.jpg'},
+        {src: '//ooo.0o0.ooo/2017/07/03/5959c25845879.jpg'},
+        {src: '//ooo.0o0.ooo/2017/07/03/5959c2a0b27c8.jpg'},
+         {src: '//ooo.0o0.ooo/2017/07/03/5959bf6468a00.jpg'},
+        {src: '//ooo.0o0.ooo/2017/07/03/5959c25845879.jpg'},
+        {src: '//ooo.0o0.ooo/2017/07/03/5959c2a0b27c8.jpg'},
         {src: ''}
-      ]
+      ],
     };
   },
   components: {
@@ -70,10 +88,16 @@ export default {
   methods: {
     showDetail() {
       // this.$store.state.displayHeader = false;
-      console.log(123);
       this.$router.push({name:'showplay'});
       //  this.$router.go('/showPlay');
     },
+    showMe() {
+      this.isAbout = true;
+      // console.log(this.isAbout);
+    },
+    back () {
+     this.isAbout = false
+    }
   }
 }
 </script>

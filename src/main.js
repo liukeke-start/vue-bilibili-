@@ -45,6 +45,9 @@ import router from "./router/router.js"
 // 配置完成后，把router 实例注入到 vue 根实例中,就可以使用路由了
 new Vue({
     el: '#app',
+    data: {
+        showModal: false
+    },
     router,
     render: h => h(App)
 })
