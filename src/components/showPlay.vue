@@ -1,19 +1,68 @@
 <template>
-    <div>
-        <h1>直播页点击页</h1>
-        <p>{{msg}}</p>
+    <div class="wrapper">
+      <div class="float-bar">
+        <router-link to="/show">
+          <i class="fa fa-arrow-left" aria-hidden="true">
+            <img src="//ooo.0o0.ooo/2017/07/04/595b4ee818246.png">
+          </i>
+        </router-link>
+        <span>小明</span>
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
+      <div >
+        <!--<video controls="controls" src="https://youtu.be/p26rzjXsYWc" class="video"></video>-->
+        <!--<video controls="controls" src="http://cn-sdyt-cu-v-01.acgvideo.com/vg2/b/28/preview_3216790-1.mp4?expires=1499234100&platform=html5&ssig=PyxHSmTvMTpvQxc_EgCqaw&oi=1875535817&stime=0&etime=360&nfa=NdlCs+CQJ65YLKw7GGjUmA==&dynamic=1&hfa=2070901909"
+        poster="//ooo.0o0.ooo/2017/07/05/595c55f7ce40c.jpg" class="video"></video>-->
+        <iframe class="video" width="100%" src="https://www.youtube.com/embed/p26rzjXsYWc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <!--简介和评论-->
+      <div class="description">
+        <div class="bar">
+            <ul>
+                <li class="info">
+                     简介
+                </li>
+                <li class="comment">
+                      评论
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="showInfo">
+           <p class="title" >【水仙/静止系】narcissu_小明</p>
+           <p class="desc" >静止系静止系静止系静止系静止系静止系静止系静止系静止系静止系静止系静止系静止系静止系
+             静止系静止系静止系静止系静止系静止系静止系</p>
+           <div class="author">
+              <img src="http://i0.hdslb.com/bfs/face/2c3a364cf409a85b4c651a6afbf6ffe22208c654.jpg" alt="">
+              <span class="name">小明</span>
+              <span class="follow"  @click="follow"> + 关注</span>
+           </div>
+           <p class="tagAll">
+              <span class="tagAbout">标签相关</span>
+              <span class="tag">静止系</span>
+          </p>
+        </div>
+      </div>
     </div>
 </template>
 <script>
-    export default {
-        data () {
-            return {
-                msg: "我是show 组件"
-            }
-        }
+export default {
+  data () {
+    return {}
+  },
+  methods: {
+    follow () {
+      var follow = $('.follow')
+      follow.innerHTML = '已关注'
+      follow.className = 'followed'
+      // var a = $('.follow')
+      console.log(follow);
     }
+  }
+}
 </script>
 <style lang="scss">
-@import '../assets/sass/show.scss'
+@import '../assets/sass/showPlay.scss'
 </style>
 

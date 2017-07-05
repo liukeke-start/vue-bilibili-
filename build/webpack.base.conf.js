@@ -7,6 +7,9 @@ function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
 
+//引入webpack
+var webpack = require('webpack')
+
 module.exports = {
     entry: {
         app: './src/main.js'
@@ -20,7 +23,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.json', '.jpg'],
         alias: {
-            '@': resolve('src')
+            '@': resolve('src'),
+            'jquery': 'jquery'
         }
     },
     module: {
@@ -51,5 +55,12 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+    //配置jquery插件
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 }
