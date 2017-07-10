@@ -24,6 +24,7 @@ Vue.use(VueLazyload, {
     listenEvents: ['scroll', 'mousewheel']
 });
 
+// jquery插件
 import $ from 'jquery'
 
 // UI组件

@@ -45,18 +45,9 @@ video {
         a {
             position: relative;
         }
-        li:active {
+        .active {
             color: #FA7198;
             font-weight: 550;
-            position: relative;
-        }
-        li:active:after {
-            content: ' ';
-            position: absolute;
-            bottom: 0rem;
-            left: 0.04rem;
-            right: 3rem;
-            width: 100%;
             border-bottom: .27rem solid #FA7198;
         }
     }
@@ -109,11 +100,6 @@ video {
             border-radius: .5rem;
         }
         .followed {
-            position: absolute;
-            padding: .5rem;
-            border-radius: .5rem;
-            margin-top: 1.1rem;
-            right: 2rem;
             color: #AFAFAF;
             border: 1px solid #AFAFAF;
         }
@@ -130,17 +116,15 @@ video {
         }
         .tag {
             position: relative;
-            padding-left: .5rem;
-            padding-right: .5rem;
-            margin-left: .2rem;
-            margin-right: .3rem;
             top: 2.0rem;
             left: -.5rem;
-            font-size: 1.5rem;
-            border: 1px solid #AFAFAF;
-            background-color: #fff;
-            border-radius: .9rem;
+            padding: .2rem .5rem;
+            margin: 0 .3rem 0 .2rem;
             width: 90%;
+            font-size: 1rem;
+            border: 1px solid #AFAFAF;
+            border-radius: .9rem;
+            background-color: #fff;
         }
     }
     ul {
@@ -168,6 +152,11 @@ video {
                 margin-top: 1.4rem;
                 .fa {
                     margin-right: .5rem;
+                    padding: .2rem 1rem;
+                    background: url(../assets/image/z_zan.png) no-repeat;
+                }
+                .cfa {
+                    background-image: url(../assets/image/zan.png);
                 }
             }
             .comment {
